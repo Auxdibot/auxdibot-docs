@@ -10,8 +10,8 @@ const config: Config = {
   url: 'https://docs.auxdibot.xyz',
   baseUrl: '/',
   organizationName: 'Auxdibot',
-  projectName: 'auxdibot',
-
+  projectName: 'auxdibot-docs',
+  deploymentBranch: 'gh-pages',
   onBrokenLinks: 'log',
   onBrokenMarkdownLinks: 'warn',
   i18n: {
