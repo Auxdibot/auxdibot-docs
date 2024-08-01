@@ -25,7 +25,7 @@ Administrators can set the punishment that is issued to members who send a messa
 | `/moderation blacklist add (phrase)`| Add a blacklisted phrase to this server. |
 | `/moderation blacklist punishment (punishment)`| Set the punishment given when a blacklisted phrase is used. |
 | `/moderation blacklist list`| See a list of every blacklisted phrase on this server. |
-| `/moderation blacklist remove (phrase|index)`| Remove a blacklisted phrase from the server. |
+| `/moderation blacklist remove (phrase\|index)`| Remove a blacklisted phrase from the server. |
 
 ## Spam Limits
 
@@ -53,5 +53,5 @@ Administrators can make a role exempt from punishments issued by AutoMod by addi
 | Command  | Description |
 | ------------- | ------------------- |
 | `/moderation exceptions add (role)`| Add a role exception to automod. The role added will not be affected by limits or blackisted phrases. |
-| `/moderation exceptions remove (role|index)`| Remove an AutoMod role exception. If you've deleted the role, use the index parameter, which is the placement of the item on /moderation exceptions list. |
+| `/moderation exceptions remove (role\|index)`| Remove an AutoMod role exception. If you've deleted the role, use the index parameter, which is the placement of the item on /moderation exceptions list. |
 | `/moderation exceptions list`| List the roles that are excempt from AutoMod punishments and limits. |

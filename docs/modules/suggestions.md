@@ -58,7 +58,7 @@ Users can be banned from creating suggestions. Administrators or member with per
 | `/suggestions updates_channel [channel]` | Change the channel where updates to suggestions are posted. |
 | `/suggestions reactions` | List the reactions for suggestions. |
 | `/suggestions add_reaction (reaction)` | Add a reaction to the reactions on suggestions. |
-| `/suggestions remove_reaction (reaction|index)` | Remove a reaction from the reactions on suggestions. |
+| `/suggestions remove_reaction (reaction\|index)` | Remove a reaction from the reactions on suggestions. |
 | `/suggestions auto_delete (delete)` | Set whether suggestions are deleted upon being approved, denied, or marked as added. |
 | `/suggestions discussion_threads (create_thread)` | Set whether a discussion thread is created when a suggestion is created. |
 | `/suggestions ban (user)` | Ban a user from using suggestions. |
