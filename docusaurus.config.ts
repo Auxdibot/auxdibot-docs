@@ -55,6 +55,28 @@ const config: Config = {
       },
 
     },
+    metadata: [
+      {
+        name: 'description',
+        content: 'The official documentation website for Auxdibot. Learn how to use Auxdibot and its features here.',
+      },
+      {
+        name: 'og:title',
+        content: 'Auxdibot Documentation',
+      },
+      {
+        name: 'og:description',
+        content: 'The official documentation website for Auxdibot. Learn how to use Auxdibot and its features here.',
+      },
+      {
+        name: 'og:image',
+        content: 'img/logo.png',
+      },
+      {
+        name: 'theme-color',
+        content: '#ffa800',
+      }
+    ],
     footer: {
       style: 'dark',
       copyright: `Copyright © ${new Date().getFullYear()} Steven Primeaux. Built with Docusaurus.`,
