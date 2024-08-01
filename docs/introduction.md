@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Auxdibot
 slug: /
 ---
 
