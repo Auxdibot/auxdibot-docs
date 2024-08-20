@@ -158,3 +158,5 @@ Some Embeds, such as [Notification Feed messages](/modules/notifications), will 
 | `{%FEED_DATE_FORMATTED%}` | The date of the feed formatted for Discord. |
 | `{%FEED_DATE_UTC%}` | The date of the feed as a UTC date. |
 | `{%FEED_DATE_ISO%}` | The date of the feed as an ISO date. |
+| `{%LEVEL_FROM%}` | The level that the user is leveling up from. |
+| `{%LEVEL_TO%}` | The level that the user is leveling up to. |
