@@ -4,7 +4,7 @@ title: Terms of Service
 
 ## Terms of Service for Auxdibot
 
-*Effective Date: 7/7/2024*
+*Effective Date: 8/20/2024*
 
 ### 1. Acceptance of Terms
 
@@ -35,7 +35,7 @@ Users agree not to use the Bot or Services to perform any illegal activities, vi
 
 ### 3. Privacy and Security
 
-While we take measures to ensure the security and privacy of your information stored on the Bot and Services, we cannot guarantee that unauthorized third parties will not gain access to user data or disrupt our services. If you believe your data has been compromised or if you believe that there is a disruption in our services, contact us at steven.primeaux@auxdible.me
+While we take measures to ensure the security and privacy of your information stored on the Bot and Services, we cannot guarantee that unauthorized third parties will not gain access to user data or disrupt our services. If you believe your data has been compromised or if you believe that there is a disruption in our services, contact us at support@auxdibot.xyz
 
 You can view our privacy policy [here](/legal/privacy-policy) for more information.
 
@@ -76,4 +76,4 @@ Auxdibot reserves the right, at our sole discretion, to modify or replace these 
 
 ### 11. Contact Us
    
-For further inquiries, please contact us at steven.primeaux@auxdible.me, or post an inquiry in our [Discord support server](https://discord.gg/tnsFW9CQEn).
+For further inquiries, please contact us at support@auxdibot.xyz, or post an inquiry in our [Discord support server](https://discord.gg/tnsFW9CQEn).

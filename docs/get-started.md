@@ -64,7 +64,15 @@ You can create command rules using the `/commands` command. Command Rules specif
 * `/commands usage channel [channel]` - Restrict all Auxdibot commands to a specific channel.
 * `/commands usage (disable|enable) (command)` - Enable or disable an Auxdibot command.
 
-### Logging
+### Logging & Moderation
+
+Logging and Moderation can be automatically configured using the `/setup moderation` command, which will allow Administrators to setup:
+
+* A Moderator role that can punish users.
+* A mute role that is given to a user who is muted.
+* A log channel.
+* A warn threshold before a user receives a mute.
+* A reporting system and channel.
 
 Auxdibot allows you to log actions that are performed on your server! Additionally, any errors that may occur with schedules, notifications, and more will be logged to your log channel.
 * `/logs channel [channel]` - Set the log channel for this server. 
@@ -72,9 +80,18 @@ Auxdibot allows you to log actions that are performed on your server! Additional
 * `/logs filter (action)` - Toggle an Auxdibot log action. When a log action is disabled, it will not be logged to your log channel.
 * `/logs latest` - View the latest logs on your server.
 
-### Mute Role
-
 By default, Auxdibot utilizes Discord's Timeout system. If administrators wish to issue permanent mutes, a mute role will need to be specified using the `/moderation settings mute_role [role]` command. You can revert to using Discord's timeout system by running the command without specifying a `role`.
+
+### Starboard
+
+Starboards can be automatically created using the `/setup starboard` command, which will allow Administrators to setup:
+
+* A starboard, with a channel, reaction, and reaction count.
+
+Up to 2 starboards can be added to a server. When a message receives enough reactions, it will be posted to the starboard for that server.
+
+Starboards can be modified with the `/starboard board` commands.
+
 ### Reaction Roles
 
 Auxdibot's reaction roles come in various shapes and sizes. You can create a reaction role (with an automatically created embed) by using `/reaction_roles add (channel) (roles) [title] [type]`.
@@ -100,26 +117,50 @@ You can utilize `/reaction_roles add (channel) (roles) [type] [...embed paramete
 
 ### Suggestions
 
-You can set a suggestions channel with `/suggestions channel (channel)`. Users can create suggestions with `/suggestions create (suggestion)` and their suggestion will be output to the suggestions channel. Administrators or people with permission can mark a suggestion accepted/denied/considered/added by running the command `/suggestions (accept|deny|consider|add) (id) [reason]`.
+Suggestions can be enabled and automatically configured using the `/setup suggestions` command, which will allow Administrators to setup:
+
+* A suggestions channel
+* A suggestions update channel
+* A suggestions moderator role
+* A set of suggestions reactions
+* Discussion threads for suggestions.
+
+Users can create suggestions with the `/suggest (suggestion)` command, and their suggestion will be output to the suggestions channel. Administrators or people with permission can mark a suggestion accepted/denied/considered/added by running the command `/suggestions respond (id) (response, considered/added/denied/accepted) [reason]`.
 
 * You can enable/disable discussion threads by running the command `/suggestions discussion_threads (create_thread)`
 * You can ban a user from suggestions by running the command `/suggestions ban (user)`
 
 ### Levels
 
-Levels are by default enabled. You can set the XP earned from sending messages by running the command `/levels message_xp (xp)` command. 
+Levels are by default disabled. Levels can be enabled and automatically configured using the `/setup levels` command, which will allow Administrators to setup:
 
-You can set the channel level up messages are sent to using the `/levels channel [channel]` command. By default, Auxdibot will reply to the message that caused the user to level up.
+* A message XP system
+* A voice chat XP system
+* A starboard message XP system
+* An event join XP system
+* A levelup channel where all levels are posted.
 
 You can disable Levels by running the command `/modules disable Levels`
 
+* You can modify the levelup message by running the command `/levels message set [...embed parameters]`
+* You can add multipliers to your server by running the `/levels multipliers` commands.
+* You can add level rewards to your server by running the `/levels rewards` commands.
+
 ### Join/Leave Messages
+
+Levels can be enabled and automatically configured using the `/setup greetings` command, which will allow Administrators to setup:
+
+* A greetings channel to greet users when they join the server.
 
 Greetings come with default embeds for when a user joins/leaves the server. You can set the channel where greeting/leaving messages are sent using `/greetings channel [channel]`. When a greetings channel is not set, no Join/Leave messages are sent.
 
 Join DM greetings are sent directly to the user when they join the server, if their privacy settings allow it.
 
-You can modify the Join/Leave/Join DM messages at any time by running the `/(join|leave|join_dm) message [...embed parameters]` commands. See [Embeds](/modules/embeds) for more information on Embed Parameters. Additionally, you can preview the Join/Leave/Join DM messages by running the commands `/(join|leave|join_dm) preview`
+:::info
+See [Embeds](/modules/embeds) for more information on Embed Parameters.
+:::
+
+You can modify the Join/Leave/Join DM messages at any time by running the `/(join|leave|join_dm) message [...embed parameters]` commands.  Additionally, you can preview the Join/Leave/Join DM messages by running the commands `/(join|leave|join_dm) preview`
 
 ### Join Roles
 

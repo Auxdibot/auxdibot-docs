@@ -48,7 +48,8 @@ Administrators or members with permission can respond to a suggestion, marking i
 
 Users can be banned from creating suggestions. Administrators or member with permissions can ban an abusive user by running the command `/suggestions ban (user)`. Users banned from suggestions can be unbanned when an administrator or member with permission unbans them with the command `/suggestions unban (user)`.
 
-### Suggestions Commands
+## Suggestions Commands
+---
 
 | Command  | Description |
 | ------------- | ------------------- |

@@ -4,7 +4,7 @@ title: Privacy Policy
 
 ## Privacy Policy for Auxdibot
 
-*Effective Date: 7/7/2024*
+*Effective Date: 8/20/2024*
 
 Auxdibot ("we," "our," or "us") operates as a Discord Bot ("Bot") and is committed to protecting your privacy. This Privacy Policy outlines how Auxdibot collects, uses, and safeguards information when you use our services ("Services").
 
@@ -25,7 +25,7 @@ We strive to protect user information using reasonable security measures. Howeve
 
 ### 3. Data Deletion
 
-Auxdibot does not collect any data that is not already publicly available on Discord, and will only collect data required for Auxdibot to perform its functionality within Discord servers. Users can request deletion of their data by sending a deletion request with the specified data to steven.primeaux@auxdible.me. However, please note that data stored on servers where Auxdibot operates may continue to be recorded.
+Auxdibot does not collect any data that is not already publicly available on Discord, and will only collect data required for Auxdibot to perform its functionality within Discord servers. Users can request deletion of their data by sending a deletion request with the specified data to support@auxdibot.xyz. However, please note that data stored on servers where Auxdibot operates may continue to be recorded.
 
 ### 4. Changes to This Privacy Policy
 
@@ -33,6 +33,6 @@ We may update this Privacy Policy from time to time to reflect changes in our in
 
 ### 5. Contact Us
 
-If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at steven.primeaux@auxdible.me.
+If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at support@auxdibot.xyz.
 
 By using Auxdibot, you agree to the collection and use of information in accordance with this Privacy Policy.
