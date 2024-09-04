@@ -57,7 +57,13 @@ Level Rewards can be removed using the `/levels rewards remove (level|index)` co
 
 ### Levelup Message
 
-The levelup message can be customized by Administrators or members with permission by running the `/levels message set` command. 
+:::tip
+You can create a Stored Embed by running the commands `/embeds builder (id)`, `/embeds storage command (id) [...embed parameters]`, `/embeds storage json (id) (json) [webhook_url]`.
+
+To view more information about Embeds, check out the [Embeds](/modules/embeds) section of the documentation.
+:::
+
+The levelup message can be customized by Administrators or members with permission by running the `/levels message set (id)` command. 
 
 It can be reset to its default by running the `/levels message reset` command, and can be previewed by running the `/levels message preview` command.
 
@@ -138,7 +144,7 @@ A global multiplier can be set for your entire server by running the `/levels mu
 | `/levels rewards add (level) (role)` | Add a reward to the Level Rewards. |
 | `/levels rewards remove [level\|index]` | Remove a reward from the Level Rewards. |
 | `/levels rewards list` | View the Level Rewards for this server. |
-| `/levels message set [...embed parameters]` | Set the levelup message. (Use %LEVEL_FROM% for the user's previous level and %LEVEL_TO% for the user's new level) |
+| `/levels message set (id) ` | Set the levelup message. (Use %LEVEL_FROM% for the user's previous level and %LEVEL_TO% for the user's new level) |
 | `/levels message reset` | Reset the levelup message back to its default value. |
 | `/levels message preview` | Preview the levelup message. |
 | `/levels xp award (xp) (user)` | Award a user XP points. |

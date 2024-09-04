@@ -11,17 +11,24 @@ Auxdibot includes Reaction Roles, a feature allowing members to add/remove roles
 
 ### Creating Reaction Roles
 
-:::info
-For more information on Embed parameters, view the [Embeds](/modules/embeds) section.
+:::tip
+You can create a Stored Embed by running the commands `/embeds builder (id)`, `/embeds storage command (id) [...embed parameters]`, `/embeds storage json (id) (json) [webhook_url]`.
+
+To view more information about Embeds, check out the [Embeds](/modules/embeds) section of the documentation.
 :::
 
-Auxdibot's reaction roles come in various shapes and sizes. Administrators or members with permission can create a reaction role (with an automatically created embed) by running the command `/reaction_roles add (channel) (roles) [title] [type]`.
+Auxdibot's reaction roles come in various shapes and sizes. Administrators or members with permission can create a reaction role (with an automatically created embed) by running the command `/reaction_roles add (channel) (roles) (id) [type]`, where the `id` parameter is the ID of a Stored Embed. (see Tip)
 
-Administrators or members with permission can create a reaction role with a custom embed by running the command `/reaction_roles add_custom (channel) (roles) [title] [type] [...embed parameters]` .
+Or additionally, reaction roles can be created using 
+* [Embed Parameters](/modules/embeds#embed-parameters) by running `/reaction_roles add_custom (channel) (roles) [...embed parameters] [type]` 
+* [JSON](/modules/embeds#json-advanced) by running `/reaction_roles add_json (channel) (roles) (json) [type]`, 
+* Using a premade embed by running `/reaction_roles add_premade (channel) (roles) [title] [type]` 
+* Attaching the reaction role to an existing message by running `/reaction_roles add_message (channel) (roles) (message_id) [type]`.
+
 
 When creating a reaction role, for the `roles` parameter, you need to specify an emoji, followed by a space, followed by the role to receive when reacting with that emoji. (ex. `😀 @Role1 🤖 @Role2`)
 
-**Example**: `/reaction_roles add channel:#my-channel title:My Reaction Role roles:😀 @Role1 🤖 @Role2`
+**Example**: `/reaction_roles add channel:#my-channel roles:😀 @Role1 🤖 @Role2 id:stored_embed`
 
 ### Reaction Role Types
 
@@ -52,13 +59,13 @@ When a Webhook User is provided in the creation of a reaction role, the `Button`
 
 | Command | Description |
 | --- | --- |
-| `/reaction_roles add (channel) (roles) [type]` | Add a reaction role to the server. |
+| `/reaction_roles add_premade (channel) (roles) [type]` | Add a reaction role to the server with a premade embed. |
 | `/reaction_roles add_custom (channel) (roles) [type] [...embed parameters]` | Add a reaction role to the server with custom Embed parameters. |
 | `/reaction_roles add_json (channel) (roles) [type] (json)` | Add a reaction role to the server with custom Discord Embed JSON. |
 | `/reaction_roles add_message (messageID) (roles) [type]` | Add a reaction role to the server using an existing message. |
-| `/reaction_roles edit [message_id] [index] [json, overrides embed parameters] [...embed parameters]` | Edit a reaction role's embed on this server. |
+| `/reaction_roles add (channel) (roles) [type] (id)` | Add a reaction role to the server with a pre-existing Stored Embed. |
 | `/reaction_roles list` | List the reaction roles on this server. |
-| `/reaction_roles remove (message_id\|index)` | Remove a reaction role from the server, deleting the message. |
+| `/reaction_roles remove (message_id\|index)` | Remove a role that is assigned when a member joins the server. |
  
 ## Join Roles
 
