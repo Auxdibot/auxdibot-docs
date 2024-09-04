@@ -32,10 +32,6 @@ By default, Auxdibot utilizes Discord's Timeout system for issuing mutes to memb
 
 Auxdibot features a `/user` command. Moderators can run the `/user (user)` command to view information about a user. In this menu, you can view their full punishment history or issue/revoke a punishment. All punishments issued from the User Embed are permanent.
 
-<p class="image">
-<img alt="User Embed" src="/_assets/user_embed.png" width="450"/>
-<em>The Auxdibot User management Embed, giving moderators easy access to punishment methods and the user's punishment record!</em>
-</p>
 
 ### Punishment Commands
 

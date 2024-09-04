@@ -23,11 +23,6 @@ When creating a reaction role, for the `roles` parameter, you need to specify an
 
 **Example**: `/reaction_roles add channel:#my-channel title:My Reaction Role roles:😀 @Role1 🤖 @Role2`
 
-<p class="image">
-<img alt="Reaction role image" src="/_assets/reaction_role.png" width="450"/>
-<em>A reaction role with the "Select Menu" type.</em>
-</p>
-
 ### Reaction Role Types
 
 You can specify a reaction role `type` parameter to decide how users interact with your reaction role.
