@@ -30,23 +30,22 @@ Greeting messages are sent under different greeting types, which can be individu
 
 ### Customizing Greetings
 
-:::info
-For more information on Embed parameters, view the [Embeds](/modules/embeds) section.
+:::tip
+You can create a Stored Embed by running the commands `/embeds builder (id)`, `/embeds storage command (id) [...embed parameters]`, `/embeds storage json (id) (json) [webhook_url]`.
+
+To view more information about Embeds, check out the [Embeds](/modules/embeds) section of the documentation.
 :::
 
-You can modify the Join/Leave/Join DM messages at any time by running the `/(join|leave|join_dm) message [...embed parameters]` commands. Additionally, you can preview the Join/Leave/Join DM messages by running the commands `/(join|leave|join_dm) preview`.
+You can modify the Join/Leave/Join DM messages at any time by running the `/greetings (join|leave|join_dm) message (id)` commands. Additionally, you can preview the Join/Leave/Join DM messages by running the commands `/greetings (join|leave|join_dm) preview`.
 
 ### Greetings Commands
 
 | Command | Description |
 | --- | --- |
-| `/greetings channel (channel)` | Set the greetings channel for this server, where join and leave messages are broadcast. |
-| `/join message [...embed parameters]` | Set the join message. |
-| `/join embed_json (json)` | Add an embed to the join message using custom JSON. |
-| `/join preview` | Preview the join message. |
-| `/join_dm message [...embed parameters]` | Set the join DM message. |
-| `/join_dm embed_json (json)` | Add an embed to the join DM message using custom JSON. |
-| `/join_dm preview` | Preview the join DM message. |
-| `/leave message [...embed parameters]` | Set the leave message. |
-| `/leave embed_json (json)` | Add an embed to the leave message using custom JSON. |
-| `/leave preview` | Preview the leave message. |
+| `/greetings channel [channel]` | Set the greetings channel for this server, where join and leave messages are broadcast. |
+| `/greetings join message (id)` | Set the join message. (See /embeds storage list for stored embeds.) |
+| `/greetings join preview` | Preview the join message. |
+| `/greetings leave message (id)` | Set the leave message. (See /embeds storage list for stored embeds.) |
+| `/greetings leave preview` | Preview the leave message. |
+| `/greetings join_dm message (id)` | Set the join DM message. (See /embeds storage list for stored embeds.) |
+| `/greetings join_dm preview` | Preview the join DM message. |

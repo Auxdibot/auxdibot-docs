@@ -6,13 +6,15 @@ title: Notifications
 
 -----
 
-:::info
-For more information on Embed parameters, view the [Embeds](/modules/embeds) section.
+:::tip
+You can create a Stored Embed by running the commands `/embeds builder (id)`, `/embeds storage command (id) [...embed parameters]`, `/embeds storage json (id) (json) [webhook_url]`.
+
+To view more information about Embeds, check out the [Embeds](/modules/embeds) section of the documentation.
 :::
 
 Auxdibot features Notification Feeds, which support YouTube (video created), Twitch (stream online), and RSS feeds. When an event occurs, a formatted message is sent to a channel of your choice.
 
-Administrators can create a notification feed by running the commands `/notifications (rss|twitch|youtube) (channel) (url [rss]|username [twitch]|handle [youtube]) [...embed parameters]`.
+Administrators can create a notification feed by running the commands `/notifications (rss|twitch|youtube) (channel) (url [rss]|username [twitch]|handle [youtube]) (id)`.
 
 When a notification feed is created, every two minutes (RSS/YouTube) or every time the user's Twitch channel goes online, Auxdibot will send out your notification data using the Discord Embed data you specified.
 
@@ -20,9 +22,9 @@ When a notification feed is created, every two minutes (RSS/YouTube) or every ti
 
 | Command  | Description |
 | ------------- | ------------------- |
-| `/notifications youtube (channel) (handle) [...embed parameters]`| Listen for youtube channel uploads using Auxdibot. |
-| `/notifications rss (channel) (url) [...embed parameters]` | Listen for RSS feed updated using Auxdibot. |
-| `/notifications twitch (channel) (username) [...embed parameters]`| Listen for streams on Twitch using Auxdibot. |
+| `/notifications youtube (channel) (handle) (id)`| Listen for youtube channel uploads using Auxdibot. |
+| `/notifications rss (channel) (url) (id)` | Listen for RSS feed updated using Auxdibot. |
+| `/notifications twitch (channel) (username) (id)`| Listen for streams on Twitch using Auxdibot. |
 | `/notifications list`| List all Auxdibot notification feeds. |
 | `/notifications delete (index)`| Delete an Auxdibot feed. |
 

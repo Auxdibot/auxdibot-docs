@@ -2,18 +2,54 @@
 title: Embeds
 ---
 
-## Embeds
+## Creating Embeds
+
+---
+
+Embeds can be created and stored on Auxdibot using a variety of commands and mechanics.
+
+### Embed Builder
+
+Auxdibot featured an Embed Builder that allows users to create Embeds using an interactive message with components. Administrators who wish to create an embed can begin creating an embed by running the command `/embed build [id]`. The `id` parameter is optional, but the user running the command will not be allowed to store the Embed if they have not specified an `id`. Embeds can be customized by using the various buttons and select menus beneath the message. 
+
+Once the user is finished creating their Discord embed, the user can choose to either `Post` or `Store` (if an `id` is specified) the embed. Once an Embed is stored, the Embed builder will close and no further customization can be made.
+
+### Storing Embeds
+
+When an Embed is stored, the Embed, its message content, and placeholders are stored on Auxdibot. Stored Embeds can be created using [Embed Parameters](#embed-parameters) by running the command `/embed storage command (id) [...embed parameters]`. Stored Embeds can also be created using [JSON](#json-advanced) by running the command `/embed storage json (id) (json)`
+
+### Posting Embeds
+
+Embeds can be posted using a [Stored Embed](#storing-embeds) ID, a set of [Embed Parameters](#embed-parameters), or [JSON](#json-advanced). When an Embed is posted, it is sent along with its message content, placeholders, and webhook URL to the `channel` specified in the command. Users can post an embed by running the `/embed post embed (channel) (id)`, `/embed post command (channel) [...embed parameters]`, or the `/embed post json (channel) (json)` commands.
+
+
+### Editing Embeds
+
+Embeds can be added to existing messages sent by **Auxdibot only** using a [Stored Embed](#storing-embeds) ID, a set of [Embed Parameters](#embed-parameters), or [JSON](#json-advanced). Users can edit an Auxdibot message by running the `/embed edit embed (message_id) (id)`, `/embed edit command (message_id) [...embed parameters]`, or the `/embed edit json (message_id) (json)` commands.
+
+## Storing Embeds
+
+---
+
+### Viewing Stored Embeds
+
+All of your stored embeds can be viewed under the `/embeds storage list` command, and can be previewed by selecting a Stored Embed from the dropdown beneath the Stored Embeds list.
+
+### Utilizing Stored Embeds
+
+Stored Embeds can be utilized in [Notification feed messages](/modules/notifications), [the server Levelup message](/modules/levels#level-message), [reaction roles](/modules/roles#reaction-roles), [scheduled messages](/modules/schedules), and [greeting messages](/modules/greetings). In order to apply a Stored Embed to a message, specify the `id` of the Stored Embed in that command.
+
+Stored Embeds can also be utilized in the [Dashboard](/navigating/dashboard), by opening the "Stored Embeds" dropdown when creating a message, and clicking on the Embed you wish to apply. The Embed will then auto-fill the Embed settings and Message Content textbox.
+
+
+## Embed Parameters
 
 ---
 
 :::warning
-Features that utilize Embeds are better experienced on the Auxdibot Dashboard!
+Features that utilize Embed Parameters are much better experienced on the Auxdibot Dashboard!
 If your Embed produces an error, which is most likely caused by malformed syntax, you will recieve a generic error message.
 :::
-
-Embeds are utilized in Reaction Roles, Schedules, Notifications, and creating Embed messages.
-
-### Embed Parameters
 
 If you are creating an Embed using Discord slash commands, you can utilize the following parameters:
 
@@ -53,33 +89,44 @@ Field Description for Field 1…
 
 Field description for Field 2…
 
-### Editing Embeds
+## JSON (Advanced)
 
-Administrators or members with permission can edit any Embeds sent by Auxdibot using the `/embed edit (message_id) [...embed parameters]` command, where `message_id` is a valid Discord message ID.
-
-### JSON (Advanced)
+---
 
 Discord Embed JSON is supported on Discord. Administrators or members with permission can obtain the JSON data for any Embed by running the command `/embed json (message_id)` where `message_id` is a valid Discord message ID.
 
-Administrators or members with permission can create an Embed using Discord Embed JSON by running the command `/embed create_json (channel) (json)`.
+Administrators or members with permission can create an Embed using Discord Embed JSON by running the command `/embed post json (channel) (json)`, or store an Embed using JSON by running the command `/embed storage json (id) (json)`.
 
-### Webhook Users (Advanced)
+
+## Webhook Users (Advanced)
+
+---
 
 :::info
 You can read more about Discord Webhooks or how to obtain a Webhook URL [here](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
 :::
 
-When running a command to create a Discord Embed (or Reaction Role!), a `webhook_url` parameter can be specified. (`https://discord.com/api/webhooks/XXXXX`) The Webhook's channel MUST match the channel Auxdibot is sending the Embed to, or you will not be able to send the Discord Embed.
+When running a command to create, store, or edit a Discord Embed (or other Auxdibot module message!), a `webhook_url` parameter can be specified. (`https://discord.com/api/webhooks/XXXXX`) The Webhook's channel MUST match the channel Auxdibot is sending the Embed to, or you will not be able to send the Discord Embed.
 
-### Embed Commands
+## Embed Commands
+
+---
 
 | Command | Description |
 | --- | --- |
-| `/embed create (channel) [...embed parameters] [webhook_url]` | Create an embed with Auxdibot. |
-| `/embed create_json (channel) (json) [webhook_url]` | Create an embed with Auxdibot using valid Discord Embed JSON data. |
-| `/embed edit (message_id) [...embed parameters]` | Edit an existing Embed by Auxdibot. |
-| `/embed edit_json (message_id) (json)` | Edit an existing Embed by Auxdibot using valid Discord Embed JSON data. |
 | `/embed json (message_id)` | Get the Discord Embed JSON data of any Embed on your server. |
+| `/embed parameters` | View the Embed parameters used to build Discord Embeds. |
+| `/embed builder [id]` | Post, edit, or store an embed using Auxdibot's Embed Builder. |
+| `/embed post command (channel) [...embed parameters] [webhook_url]` | Post an embed using command parameters. (View /embed parameters for a detailed description of embed parameters.) |
+| `/embed post json (channel) (json) [webhook_url]` | Post an embed using valid Discord Embed JSON data. |
+| `/embed post embed (channel) (id)` | Post a stored embed using its ID. |
+| `/embed edit command (message_id) [...embed parameters]` | Edit an existing Embed using command parameters. |
+| `/embed edit json (message_id) (json)` | Edit an existing Embed by Auxdibot using valid Discord Embed JSON data. |
+| `/embed edit edmit (message id) (id)` | Add a stored embed to a message using its ID. |
+| `/embed storage list` | List every stored embed in the server. |
+| `/embed storage delete (id)` | Delete a stored embed from the server. |
+| `/embed storage command (id) [...embed parameters] [webhook_url]` | Store an embed using command parameters. |
+| `/embed storage json (id) (json) [webhook_url]` | Store an embed using valid Discord Embed JSON data. |
 
 ## Placeholders
 
@@ -89,7 +136,7 @@ When running a command to create a Discord Embed (or Reaction Role!), a `webhook
 You can view this list using Auxdibot at any time by running the command `/help placeholders`
 :::
 
-Some Embeds, such as [Notification Feed messages](/modules/notifications), will utilize placeholders in Auxdibot. When a placeholder is included in a message, it is substituted for the content it represents.
+Some Embeds, such as [Notification Feed messages](/modules/notifications) or [the server Levelup Message](/modules/levels#levelup-message), will utilize placeholders in Auxdibot. When a placeholder is included in a message, it is substituted for the content it represents.
 
 | Placeholder | Description |
 | --- | --- |
