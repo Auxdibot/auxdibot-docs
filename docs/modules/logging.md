@@ -8,10 +8,6 @@ title: Logging
 -----
 When an action is logged on Auxdibot, your latest log will be updated and a log will be sent to the log channel on your server. The log channel can be changed with the command `/settings log_channel`.
 
-<p class="image">
-<img alt="Log Embed" src="/_assets/log_embed.png" width="450"/>
-<em>The log embed sent to the log channel, which contains additional information about the action that has occurred.</em>
-</p>
 
 ### Viewing Logs
 
